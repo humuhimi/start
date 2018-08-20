@@ -1,0 +1,22 @@
+bug
+
+hover
+cant upload
+cant show thumbs
+cant use get_Result
+
+PHP Warning:  file_get_contents(http://www.mamp.info/feed/mac/MAMP/English/feed/home.json):
+ failed to open stream: php_network_getaddresses: getaddrinfo failed: nodename nor servname provided,
+ or not known in /Applications/MAMP/bin/mamp/feed/fetchFeed.php on line 19
+
+  Undefined variable: Images in /Applications/MAMP/htdocs/image_Uploader/ImageUploader.php on line 60
+
+   PHP Warning:
+    Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/image_Uploader/index.php on line 70
+
+    Uncaught Error:
+    Call to undefined method Myapp\ImageUploader::getResults() in /Applications/MAMP/htdocs/image_Uploader/index.php:33
+
+    Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/image_Uploader/index.php on line 33
