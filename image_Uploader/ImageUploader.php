@@ -1,6 +1,8 @@
 <?php
 namespace Myapp;
 
+
+
 class ImageUploader {
 
   private $_imageFileName;
@@ -38,6 +40,7 @@ header('Location: http://'.$_SERVER['HTTP_HOST']);
 exit();
   }
 // __________________________________________________________
+// TODO:  Call to undefined method Myapp\ImageUploader::getResults()
 public function getResults(){
   $success=null;
   $error=null;
@@ -54,7 +57,9 @@ public function getResults(){
   // 配列形式の変数をlistに格納する
 }
 
+  // TODO:  Undefined variable: Images in /Applications/MAMP/htdocs/image_Uploader/ImageUploader.php on line 60
   // _____________________________________
+  // TODO: show thumbnail
 public function getImages(){
   $images =[];
   $files=[];
@@ -117,6 +122,7 @@ public function getImages(){
   }
   // -----------------------------------
 private function _validateImageType(){
+  // TODO:bug
 $this->_imageType=exif_imageType($_FILES['image']['tmp_name']);
 var_dump($this->_imageType);
 switch($this->_imageType){
@@ -148,6 +154,7 @@ private function _save($ext){
   return $savePath;
 
 
+
   // if (is_uploaded_file($_FILE['image']['tmp'])) {
   //
   // }
@@ -156,7 +163,7 @@ private function _save($ext){
 private function _createThumbnail($savePath){
   $imageSize = getimagesize($savePath);
   // savaPathはファイル名
-  $width =$imageSize[0];
+  $width =$imageSize[0];//
   // o,1は
   $height=$imageSize[1];
   if ($width>THUMBNAIL_WIDTH) {

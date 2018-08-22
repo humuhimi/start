@@ -30,7 +30,7 @@ function h($s){
 }
 
 require "ImageUploader.php";
-
+// TODO:  thrown in /Applications/MAMP/htdocs/image_Uploader/index.php on line 33
 $uploader=new Myapp\ImageUploader();
 // $uploaderにはクラスを入れるだけ。
 // インスタンス化させて使う
@@ -84,6 +84,7 @@ $images=$uploader->getImages();
     box-shadow: 0 4px  #0088cc;
     background:#00aaff;
   }
+  /*TODO:fix hover*/
   .btn:hover{
     opacity: 0.8;
   }
@@ -101,6 +102,7 @@ $images=$uploader->getImages();
   </label>
   <label id="submit">
   <input type="submit" name="submit" id="submit" value="アップロード" >
+<!--TODO:fix no submit  -->
   </label>
 </form>
 </div>
@@ -113,6 +115,7 @@ $images=$uploader->getImages();
 <?php endif; ?>
 
 <ul>
+  <!-- TODO:    Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/image_Uploader/index.php on line 70 -->
   <?php foreach ($images as $image) :?>
     <li>
       <a href="<?php echo h(basename(IMAGES_DIR)).'/'.basename($image); ?>">
@@ -122,6 +125,7 @@ $images=$uploader->getImages();
     </li>
   <?php endforeach; ?>
 </ul>
+<!--TODO:bug  -->
 <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
 <script>
 $(function(){

@@ -1,9 +1,9 @@
 bug
 
-hover
-cant upload
-cant show thumbs
-cant use get_Result
+hover todo
+cant upload　todo
+cant show thumbs todo
+cant use get_Result todo
 
 PHP Warning:  file_get_contents(http://www.mamp.info/feed/mac/MAMP/English/feed/home.json):
  failed to open stream: php_network_getaddresses: getaddrinfo failed: nodename nor servname provided,
